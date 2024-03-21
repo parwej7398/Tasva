@@ -44,16 +44,16 @@ const Collection = () => {
   ];
   return (
     <div className="flex flex-col gap-10 px-[5%]">
-      <div key={""} className="grid grid-cols-3 justify-center gap-5 p-3 ">
-        {categories.map((i) => (
-          <div className="relative">
+      <div className="grid grid-cols-3  justify-center gap-5 p-3 ">
+        {categories.map((i, index) => (
+          <div className="relative" key={index}>
             <img
               src={i.img}
               alt=""
-              className="h-[30rem] w-[30rem] hover:scale-105 border-2"
+              className="hover:scale-105 object-cover border-2"
             />
             <div className="absolute w-full -bottom-3 text-center">
-              <p className="w-1/2 h-10 items-center flex justify-center text-white ml-24 bg-[#85754e] border">
+              <p className="w-1/2 h-10 items-center hover:bg-white hover:text-black hover:border-[#85754e] flex justify-center text-white ml-24 bg-[#85754e] border">
                 {i.title}
               </p>
             </div>

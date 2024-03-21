@@ -8,24 +8,16 @@ import img from "../../Asset/ranveerkpur.png";
 import img2 from "../../Asset/serani.png";
 import img3 from "../../Asset/yellokurta.png";
 import img4 from "../../Asset/imges.png";
+import { Link } from "react-router-dom";
 
 const FrontPages = () => {
   var settings = {
-    // dots: true,
-    // lazyLoad: true,
-    // infinite: true,
-    // autoPlay: true,
-    // speed: 500,
-    // slidesToShow: 1,
-    // slidesToScroll: 1,
-    // initialSlide: 2,
-    // autoplaySpeed: 2000,
     dots: true,
     infinite: true,
     speed: 500,
     autoplay: true,
     slidesToShow: 1,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
     slidesToScroll: 1,
   };
   return (
@@ -33,16 +25,24 @@ const FrontPages = () => {
       <div className="slider-container">
         <Slider {...settings}>
           <div>
-            <img src={img} className="h-[35rem] w-[100%]" />
+            <Link to={"/serwani_achkans"}>
+              <img src={img} className="h-[35rem] w-[100%]" />
+            </Link>
           </div>
           <div>
-            <img src={img4} className="h-[35rem] w-[100%]" />
+            <Link>
+              <img src={img4} className="h-[35rem] w-[100%]" />
+            </Link>
           </div>
           <div>
-            <img src={img3} className="h-[35rem] w-[100%]" />
+            <Link>
+              <img src={img3} className="h-[35rem] w-[100%]" />
+            </Link>
           </div>
           <div>
-            <img src={img2} className="h-[35rem] w-[100%]" />
+            <Link to={"/serwani_achkans"}>
+              <img src={img2} className="h-[35rem] w-[100%]" />
+            </Link>
           </div>
         </Slider>
       </div>

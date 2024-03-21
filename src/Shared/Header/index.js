@@ -19,7 +19,9 @@ const Header = () => {
           </p>
         </div>
         <div className="flex h-8 justify-end items-center gap-5 px-[2%] text-xs bg-[#85754e] text-white">
-          <button>STORE LOCATOR</button>
+          <Link to={"https://www.tasva.com/pages/store-locator"}>
+            <button>STORE LOCATOR</button>
+          </Link>
           <Link to={"/contact_us"}>
             <button>CONTACT US</button>
           </Link>
@@ -32,8 +34,12 @@ const Header = () => {
           </div>
         </div>
         <div className="flex justify-between bg-white z-50 w-full border-b text-sm tracking-wide p-2 items-center">
-          <img src={tasva_logo} alt="" className="h-14" />
-          <p className="hover:underline cursor-pointer">NEW ARRIVALS</p>
+          <Link to={"/"}>
+            <img src={tasva_logo} alt="" className="h-14" />
+          </Link>
+          <Link to={"/new_arrival"}>
+            <p className="hover:underline cursor-pointer">NEW ARRIVALS</p>
+          </Link>
           <div className="flex flex-col relative py-5 group">
             <p className="cursor-pointer hover:underline ">KURTAS & BUNDIS</p>
             <div className="absolute top-12 z-50 p-2 w-52 !text-black border shadow bg-white hidden group-hover:block">
@@ -190,12 +196,16 @@ const Header = () => {
           </div>
 
           <div className="flex flex-col relative py-5 group">
-            <p className="cursor-pointer hover:underline ">BRAND</p>
+            <Link to={"/brand_story"}>
+              <p className="cursor-pointer hover:underline ">BRAND</p>
+            </Link>
             <div className="absolute top-12 z-50 p-2 w-52 !text-black border shadow bg-white hidden group-hover:block">
               <div>
-                <p className="hover:text-[#72706d] p-2 cursor-pointer">
-                  OUR STORY
-                </p>
+                <Link to={"/brand_story"}>
+                  <p className="hover:text-[#72706d] p-2 cursor-pointer">
+                    OUR STORY
+                  </p>
+                </Link>
               </div>
             </div>
           </div>
