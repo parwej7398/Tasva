@@ -1,18 +1,32 @@
 import {
   AccountCircleOutlined,
+  Close,
+  Menu,
   LocalMallOutlined,
   Search,
 } from "@mui/icons-material";
-import { IconButton } from "@mui/material";
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Divider,
+  Drawer,
+  IconButton,
+  List,
+  ListItem,
+  ListItemButton,
+  TextField,
+} from "@mui/material";
 import tasva_logo from "../../Asset/Tasva_logo.webp";
 import aditya_birla from "../../Asset/Aditya_Birla_Fashion.webp";
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+  const [open, setOpen] = useState(false);
   return (
     <>
-      <div className="fixed w-full z-50">
+      <div className="fixed w-full z-50 max-lg:hidden">
         <div className="bg-[#dbd7d0] cursor-pointer">
           <p className="text-xs text-center p-3 tracking-widest">
             FREE SHIPPING ON ALL ORDERS PAN INDIA
@@ -41,7 +55,9 @@ const Header = () => {
             <p className="hover:underline cursor-pointer">NEW ARRIVALS</p>
           </Link>
           <div className="flex flex-col relative py-5 group">
-            <p className="cursor-pointer hover:underline ">KURTAS & BUNDIS</p>
+            <Link to={"/kurta_bundi"}>
+              <p className="cursor-pointer hover:underline ">KURTAS & BUNDIS</p>
+            </Link>
             <div className="absolute top-12 z-50 p-2 w-52 !text-black border shadow bg-white hidden group-hover:block">
               <div>
                 <p className="hover:text-[#72706d] p-2 cursor-pointer">
@@ -67,7 +83,9 @@ const Header = () => {
           </div>
 
           <div className="flex flex-col relative py-5 group">
-            <p className="cursor-pointer hover:underline ">BANDHGALAS</p>
+            <Link to={"/bandhgala_suits_for_men"}>
+              <p className="cursor-pointer hover:underline ">BANDHGALAS</p>
+            </Link>
             <div className="absolute top-12 z-50 p-2 w-52 !text-black border shadow bg-white hidden group-hover:block">
               <div>
                 <p className="hover:text-[#72706d] p-2 cursor-pointer">
@@ -136,9 +154,12 @@ const Header = () => {
           </div>
 
           <div className="flex flex-col relative py-5 group">
-            <p className="cursor-pointer hover:underline ">
-              SHERWANIS & ACHKANS
-            </p>
+            <Link to={"/serwani_achkans"}>
+              <p className="cursor-pointer hover:underline ">
+                SHERWANIS & ACHKANS
+              </p>
+            </Link>
+
             <div className="absolute top-12 z-50 p-2 w-52 !text-black border shadow bg-white hidden group-hover:block">
               <div>
                 <p className="hover:text-[#72706d] p-2 cursor-pointer">
@@ -210,22 +231,131 @@ const Header = () => {
             </div>
           </div>
 
-          <div className="border-b w-fit rounded">
-            <input
-              type="search"
-              className="outline-none p-2"
-              placeholder="TYPE TO SEARCH..."
-            />
-            <IconButton>
-              <Search />
-            </IconButton>
-          </div>
           <div>
             <IconButton>
               <LocalMallOutlined />
             </IconButton>
           </div>
           <img src={aditya_birla} alt="" className="h-20" />
+        </div>
+      </div>
+
+      <div className="bg-[#dbd7d0] cursor-pointer">
+        <p className="text-xs text-center p-3 tracking-widest">
+          FREE SHIPPING ON ALL ORDERS PAN INDIA
+        </p>
+      </div>
+      <div className="flex lg:hidden w-full">
+        <div className="flex justify-between lg:pl-10 pl-3 lg:pr-20 pr-3 items-center text-center">
+          <IconButton onClick={() => setOpen(true)}>
+            <Menu />
+          </IconButton>
+
+          <Drawer
+            className="lg:!hidden"
+            anchor="right"
+            open={open}
+            onClose={() => setOpen(false)}
+          >
+            <List>
+              <ListItem className="!flex !justify-between gap-5">
+                <TextField size="small" placeholder="Search Something..." />
+                <IconButton onClick={() => setOpen(false)}>
+                  <Close />
+                </IconButton>
+              </ListItem>
+              <Divider />
+              <Link to="/aboutus" onClick={() => setOpen(false)}>
+                <ListItemButton>NEW ARRIVALS</ListItemButton>
+                <Divider />
+              </Link>
+              <Accordion elevation={0}>
+                <AccordionSummary>
+                  <p>KURTAS & BUNDIS</p>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <span className="flex flex-col gap-4">
+                    <Link to="/dairy">
+                      <p
+                        className="text-cyan-800"
+                        onClick={() => setOpen(false)}
+                      >
+                        SINGLE KURTA
+                      </p>
+                    </Link>
+                    <Link to="/beverage">
+                      <p
+                        className="text-cyan-800"
+                        onClick={() => setOpen(false)}
+                      >
+                        KURTA SETS
+                      </p>
+                    </Link>
+                    <Link to="/liquor">
+                      <p
+                        className="text-cyan-800"
+                        onClick={() => setOpen(false)}
+                      >
+                        KURTA BUNDI SET
+                      </p>
+                    </Link>
+                    <Link to="/liquor">
+                      <p
+                        className="text-cyan-800"
+                        onClick={() => setOpen(false)}
+                      >
+                        BUNDI & NEHRU JACKET
+                      </p>
+                    </Link>
+                  </span>
+                </AccordionDetails>
+              </Accordion>
+
+              <Accordion elevation={0}>
+                <AccordionSummary>
+                  <p>BANDHGALAS</p>
+                </AccordionSummary>
+                <AccordionDetails className="!outline-none">
+                  <span className="flex flex-col gap-4">
+                    <Link to="/ml_brick_200">
+                      <p
+                        className="text-cyan-800"
+                        onClick={() => setOpen(false)}
+                      >
+                        {" "}
+                        BANDHGALAS
+                      </p>
+                    </Link>
+                  </span>
+                </AccordionDetails>
+              </Accordion>
+              <Divider />
+              <Link to="/service">
+                <ListItemButton onClick={() => setOpen(false)}>
+                  Services
+                </ListItemButton>
+                <Divider />
+              </Link>
+            </List>
+          </Drawer>
+          <Link to={"/"}>
+            <img src={tasva_logo} alt="" className="h-14" />
+          </Link>
+
+          <div>
+            <Link to={"/login"}>
+              <IconButton>
+                <AccountCircleOutlined className="!size-6" />
+              </IconButton>
+            </Link>
+          </div>
+          <IconButton>
+            <Search />
+          </IconButton>
+          <IconButton>
+            <LocalMallOutlined />
+          </IconButton>
+          <img src={aditya_birla} alt="" className="h-16" />
         </div>
       </div>
     </>

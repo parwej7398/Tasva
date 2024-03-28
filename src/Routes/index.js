@@ -1,4 +1,6 @@
+import BandhgalaSuitsForMen from "../Components/Bandhgala Suits For Men";
 import BrandStory from "../Components/Brand Story";
+import KurtaBundi from "../Components/KurtaBundi";
 import NewArrival from "../Components/New Arrivals";
 import SerwaniAchkans from "../Components/Sherwanis & Achkans";
 import BestSeller from "../Pages/BestSeller";
@@ -47,5 +49,15 @@ export const routes = [
     id: 7,
     path: "/brand_story",
     element: <BrandStory />,
+  },
+  {
+    id: 7,
+    path: "/kurta_bundi",
+    element: <KurtaBundi />,
+  },
+  {
+    id: 7,
+    path: "/bandhgala_suits_for_men",
+    element: <BandhgalaSuitsForMen />,
   },
 ];

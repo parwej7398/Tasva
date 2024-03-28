@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
 
 const BestSeller = () => {
+  const [hover, setHover] = useState(true);
   const settings = {
     dots: true,
     infinite: true,
@@ -13,131 +14,48 @@ const BestSeller = () => {
   };
   return (
     <>
-      <div className="p-20">
-        <div className="flex justify-between p-10">
+      <div className="lg:p-20 p-4">
+        <div className="flex justify-between lg:p-10 p-4 px-20">
           <p>BEST SELLERS</p>
           <p>View all</p>
         </div>
-        {/* <div className="px-[2%]">
+        <div className="lg:px-[10%] ">
           <div className="slider-container">
             <Slider {...settings}>
-              <div className="border bg-red-300">
-                <div className="slider-container">
-                  <Slider {...settings}>
-                    <div>
-                      <div className="w-96">
-                        <img
-                          src={
-                            "https://www.google.com/aclk?sa=l&ai=DChcSEwiF77OgnIKFAxUEHYMDHfYPCJoYABAHGgJzZg&ase=2&gclid=EAIaIQobChMIhe-zoJyChQMVBB2DAx32DwiaEAQYBCABEgICkfD_BwE&sig=AOD64_1cB_G01kPJ17o_MeMs8vNJwDcvxA&ctype=5&nis=6&adurl&ved=2ahUKEwizlqWgnIKFAxXsxDgGHcnsDzwQvhd6BAgBEGM"
-                          }
-                          alt=""
-                          className="h-48"
-                        />
-                      </div>
-                      <div>
-                        <p>Open Collar Single Kurta</p>
-                        <p>₹ 1,999</p>
-                      </div>
-                    </div>
-                    <div>
-                      <div className="w-96">
-                        <img
-                          src={
-                            "https://www.google.com/aclk?sa=l&ai=DChcSEwiF77OgnIKFAxUEHYMDHfYPCJoYABAHGgJzZg&ase=2&gclid=EAIaIQobChMIhe-zoJyChQMVBB2DAx32DwiaEAQYBCABEgICkfD_BwE&sig=AOD64_1cB_G01kPJ17o_MeMs8vNJwDcvxA&ctype=5&nis=6&adurl&ved=2ahUKEwizlqWgnIKFAxXsxDgGHcnsDzwQvhd6BAgBEGM"
-                          }
-                          alt=""
-                          className="h-48"
-                        />
-                      </div>
-                      <div>
-                        <p>Open Collar Single Kurta</p>
-                        <p>₹ 1,999</p>
-                      </div>
-                    </div>
-                    <div>
-                      <div className="w-96">
-                        <img
-                          src={
-                            "https://www.google.com/aclk?sa=l&ai=DChcSEwiF77OgnIKFAxUEHYMDHfYPCJoYABAHGgJzZg&ase=2&gclid=EAIaIQobChMIhe-zoJyChQMVBB2DAx32DwiaEAQYBCABEgICkfD_BwE&sig=AOD64_1cB_G01kPJ17o_MeMs8vNJwDcvxA&ctype=5&nis=6&adurl&ved=2ahUKEwizlqWgnIKFAxXsxDgGHcnsDzwQvhd6BAgBEGM"
-                          }
-                          alt=""
-                          className="h-48"
-                        />
-                      </div>
-                      <div>
-                        <p>Open Collar Single Kurta</p>
-                        <p>₹ 1,999</p>
-                      </div>
-                    </div>
-                  </Slider>
-                </div>
-              </div>
-              <div className="border bg-red-400">
-                <div className="slider-container">
-                  <Slider {...settings}>
-                    <div>
-                      <h3>1</h3>
-                    </div>
-                    <div>
-                      <h3>2</h3>
-                    </div>
-                    <div>
-                      <h3>3</h3>
-                    </div>
-                  </Slider>
-                </div>
-              </div>
-              <div className="border bg-red-500">
-                <div className="slider-container">
-                  <Slider {...settings}>
-                    <div>
-                      <h3>1</h3>
-                    </div>
-                    <div>
-                      <h3>2</h3>
-                    </div>
-                    <div>
-                      <h3>3</h3>
-                    </div>
-                  </Slider>
-                </div>
-              </div>
-              <div className="border bg-red-600">
-                <div className="slider-container">
-                  <Slider {...settings}>
-                    <div>
-                      <h3>1</h3>
-                    </div>
-                    <div>
-                      <h3>2</h3>
-                    </div>
-                    <div>
-                      <h3>3</h3>
-                    </div>
-                  </Slider>
-                </div>
-              </div>
-              <div className="border bg-red-700">
-                <div className="slider-container">
-                  <Slider {...settings}>
-                    <div>
-                      <h3>1</h3>
-                    </div>
-                    <div>
-                      <h3>2</h3>
-                    </div>
-                    <div>
-                      <h3>3</h3>
-                    </div>
-                  </Slider>
-                </div>
-              </div>
+              {[1, 2, 3].map((i, index) => {
+                return (
+                  <div
+                    className="flex flex-col px-2"
+                    onMouseEnter={() => setHover(index)}
+                    onMouseLeave={() => setHover("")}
+                  >
+                    <Slider
+                      arrows={false}
+                      autoplay
+                      autoplaySpeed={2000}
+                      pauseOnHover={hover === index}
+                    >
+                      <img
+                        src="https://www.tasva.com/cdn/shop/products/TasvaDay124680_540x.jpg?v=1656160032"
+                        alt=""
+                      />
+                      <img
+                        src="https://www.tasva.com/cdn/shop/products/TasvaDay124690-2_540x.jpg?v=1656160032"
+                        alt=""
+                      />
+                      <img
+                        src="https://www.tasva.com/cdn/shop/products/TasvaDay124693_540x.jpg?v=1656160014"
+                        alt=""
+                      />
+                    </Slider>
+                    <p>Open Collar Single Kurta</p>
+                    <p>₹ 1,999</p>
+                  </div>
+                );
+              })}
             </Slider>
           </div>
-        </div> */}
-        <Slider {...settings}>
-          <img src="" alt="" />
-        </Slider>
+        </div>
       </div>
     </>
   );
