@@ -265,7 +265,7 @@ const Header = () => {
                 </IconButton>
               </ListItem>
               <Divider />
-              <Link to="/aboutus" onClick={() => setOpen(false)}>
+              <Link onClick={() => setOpen(false)}>
                 <ListItemButton>NEW ARRIVALS</ListItemButton>
                 <Divider />
               </Link>
@@ -276,36 +276,16 @@ const Header = () => {
                 <AccordionDetails>
                   <span className="flex flex-col gap-4">
                     <Link to="/dairy">
-                      <p
-                        className="text-cyan-800"
-                        onClick={() => setOpen(false)}
-                      >
-                        SINGLE KURTA
-                      </p>
+                      <p onClick={() => setOpen(false)}>SINGLE KURTA</p>
                     </Link>
                     <Link to="/beverage">
-                      <p
-                        className="text-cyan-800"
-                        onClick={() => setOpen(false)}
-                      >
-                        KURTA SETS
-                      </p>
+                      <p onClick={() => setOpen(false)}>KURTA SETS</p>
                     </Link>
                     <Link to="/liquor">
-                      <p
-                        className="text-cyan-800"
-                        onClick={() => setOpen(false)}
-                      >
-                        KURTA BUNDI SET
-                      </p>
+                      <p onClick={() => setOpen(false)}>KURTA BUNDI SET</p>
                     </Link>
                     <Link to="/liquor">
-                      <p
-                        className="text-cyan-800"
-                        onClick={() => setOpen(false)}
-                      >
-                        BUNDI & NEHRU JACKET
-                      </p>
+                      <p onClick={() => setOpen(false)}>BUNDI & NEHRU JACKET</p>
                     </Link>
                   </span>
                 </AccordionDetails>
@@ -313,29 +293,96 @@ const Header = () => {
 
               <Accordion elevation={0}>
                 <AccordionSummary>
-                  <p>BANDHGALAS</p>
+                  <Link to={"/bandhgala_suits_for_men"}>
+                    <p onClick={() => setOpen(false)}> BANDHGALAS</p>
+                  </Link>
                 </AccordionSummary>
                 <AccordionDetails className="!outline-none">
                   <span className="flex flex-col gap-4">
-                    <Link to="/ml_brick_200">
-                      <p
-                        className="text-cyan-800"
-                        onClick={() => setOpen(false)}
-                      >
-                        {" "}
-                        BANDHGALAS
-                      </p>
+                    <Link>
+                      <p onClick={() => setOpen(false)}> BANDHGALAS</p>
+                    </Link>
+                  </span>
+                </AccordionDetails>
+              </Accordion>
+
+              <Accordion elevation={0}>
+                <AccordionSummary>
+                  <p>SHERWANIS & ACHKANS</p>
+                </AccordionSummary>
+                <AccordionDetails className="!outline-none">
+                  <span className="flex flex-col gap-4">
+                    <Link>
+                      <p onClick={() => setOpen(false)}>ACHKANS</p>
+                    </Link>
+                    <Link>
+                      <p onClick={() => setOpen(false)}>SHERWANIS</p>
+                    </Link>
+                  </span>
+                </AccordionDetails>
+              </Accordion>
+
+              <Accordion elevation={0}>
+                <AccordionSummary>
+                  <p>OCCASION WEAR</p>
+                </AccordionSummary>
+                <AccordionDetails className="!outline-none">
+                  <span className="flex flex-col gap-4">
+                    <Link>
+                      <p onClick={() => setOpen(false)}> HALDI</p>
+                    </Link>
+                    <Link>
+                      <p onClick={() => setOpen(false)}> SANGEET</p>
+                    </Link>
+                    <Link>
+                      <p onClick={() => setOpen(false)}> RECPTION</p>
+                    </Link>
+                    <Link>
+                      <p onClick={() => setOpen(false)}> FESTIVE WERE</p>
+                    </Link>
+                  </span>
+                </AccordionDetails>
+              </Accordion>
+
+              <Accordion elevation={0}>
+                <AccordionSummary>
+                  <p>WEDDING</p>
+                </AccordionSummary>
+                <AccordionDetails className="!outline-none">
+                  <span className="flex flex-col gap-4">
+                    <Link>
+                      <p onClick={() => setOpen(false)}> FOR DROOM</p>
+                    </Link>
+                    <Link>
+                      <p onClick={() => setOpen(false)}>FOR FRIENDS & FAMILY</p>
+                    </Link>
+                  </span>
+                </AccordionDetails>
+              </Accordion>
+
+              <Accordion elevation={0}>
+                <AccordionSummary>
+                  <p>BRAND</p>
+                </AccordionSummary>
+                <AccordionDetails className="!outline-none">
+                  <span className="flex flex-col gap-4">
+                    <Link>
+                      <p onClick={() => setOpen(false)}> OUR STORY</p>
                     </Link>
                   </span>
                 </AccordionDetails>
               </Accordion>
               <Divider />
-              <Link to="/service">
-                <ListItemButton onClick={() => setOpen(false)}>
-                  Services
-                </ListItemButton>
+              <Link onClick={() => setOpen(false)}>
+                <Link to="https://www.tasva.com/pages/store-locator">
+                  <ListItemButton>STORE LOCATION</ListItemButton>
+                </Link>
+                <Link to={"/contact_us"}>
+                  <ListItemButton>CONTACT US</ListItemButton>
+                </Link>
                 <Divider />
               </Link>
+              <Divider />
             </List>
           </Drawer>
           <Link to={"/"}>

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const BrandStory = () => {
   return (
     <div>
-      <div className="flex gap-2 p-4 px-[5%] pt-44">
+      <div className="flex gap-2 p-4 lg:px-[5%] lg:pt-44">
         <Link to={"/"}>
           <p>Home</p>
         </Link>

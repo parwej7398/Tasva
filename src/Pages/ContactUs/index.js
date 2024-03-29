@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 const ContactUs = () => {
   return (
     <>
-      <div className="px-[5%] pt-44">
-        <div className="flex gap-1 items-center cursor-pointer">
+      <div className="lg:px-[5%] p-2 lg:pt-44">
+        <div className="flex gap-1 lg:items-center cursor-pointer">
           <Link to={"/"}>
             <p className="text-sm">HOME</p>
           </Link>
@@ -14,32 +14,32 @@ const ContactUs = () => {
             <p className="text-sm">CONTACT US</p>
           </Link>
         </div>
-        <div className="flex flex-col justify-center p-32 items-center gap-5">
-          <p className="text-3xl">CONTACT US</p>
+        <div className="flex flex-col justify-center lg:p-32 p-4 items-center gap-5">
+          <p className="lg:text-3xl text-2xl">CONTACT US</p>
           <input
             type="text"
-            className="border w-[30rem] p-2"
+            className="border lg:w-[30rem] w-full p-2"
             placeholder="Name"
           />
           <input
             type="email"
-            className="border w-[30rem] p-2"
+            className="border lg:w-[30rem] w-full p-2"
             placeholder="Email"
           />
           <input
             type="text"
-            className="border w-[30rem] p-2"
+            className="border lg:w-[30rem] w-full p-2"
             placeholder="Message"
           />
 
-          <p className="border w-[30rem] text-center p-2 bg-[#82734e] text-white">
+          <p className="border lg:w-[30rem] w-full text-center p-2 bg-[#82734e] text-white">
             SEND
           </p>
         </div>
       </div>
-      <div className="flex flex-col justify-center p-32 items-center gap-5 bg-[#f6f5f3]">
-        <p className="text-4xl">Our Corporate Office</p>
-        <p className="text-xl">INDIVINITY CLOTHING RETAIL PRIVATE LIMITED</p>
+      <div className="flex flex-col justify-center lg:p-32 p-4 items-center gap-5 bg-[#f6f5f3]">
+        <p className="lg:text-4xl text-xl">Our Corporate Office</p>
+        <p className="lg:text-xl">INDIVINITY CLOTHING RETAIL PRIVATE LIMITED</p>
         <div>
           <p>Plot No - 707, Sector-37, Pace City II.</p>
           <p>Gurgaon, Haryana - 122002</p>

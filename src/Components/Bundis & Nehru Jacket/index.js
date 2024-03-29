@@ -1,260 +1,79 @@
 import React from "react";
-import serwani from "../../SerwaniPhoto/SerwaniFrist.png";
-import serwanisec from "../../SerwaniPhoto/SerwaniSecond.png";
-import serwanithr from "../../SerwaniPhoto/SerwaniThrid.png";
-import serwanifour from "../../SerwaniPhoto/SerwaniFourth.png";
-import serwanififth from "../../SerwaniPhoto/SerwaniFifth.png";
-import serwanisix from "../../SerwaniPhoto/SerwaniSix.png";
-import serwaniseven from "../../SerwaniPhoto/SerwaniSeven.png";
-import serwanieight from "../../SerwaniPhoto/SerwaniEight.png";
-import serwaninine from "../../SerwaniPhoto/SerwaniNine.png";
-import serwaniten from "../../SerwaniPhoto/SerwaniTen.png";
-import serwanieleven from "../../SerwaniPhoto/SrwaniEleven.png";
 import { Accordion, AccordionDetails, AccordionSummary } from "@mui/material";
 import { Add } from "@mui/icons-material";
 import { Link, useParams } from "react-router-dom";
 
-const NewArrival = () => {
+const BundisNehruJacket = () => {
   const { id, slug } = useParams();
   console.log(id, slug);
   const categories = [
     {
       id: 1,
-      imgage: serwanisec,
+      imgage:
+        "https://cdn.shopify.com/s/files/1/0606/5864/7273/files/228-TASVAWEBPR_500x.jpg?v=1711000753",
       title: "Classic Achkan With Tasva Buttons",
       price: "₹9,999",
     },
     {
       id: 2,
-      imgage: serwanithr,
+      imgage:
+        "https://cdn.shopify.com/s/files/1/0606/5864/7273/files/77-TASVAWEBPR_500x.jpg?v=1711000947",
       title: "Asymmetric Jacket Paired With Kurta And Salwar",
       price: "₹16,999",
     },
     {
       id: 3,
-      imgage: serwanifour,
+      imgage:
+        "https://cdn.shopify.com/s/files/1/0606/5864/7273/files/112-TASVAWEBPR_500x.jpg?v=1711001038",
       title: "Red Silk Brocade Sherwani",
       price: "₹39,999",
     },
     {
       id: 4,
-      imgage: serwanififth,
+      imgage:
+        "https://cdn.shopify.com/s/files/1/0606/5864/7273/files/361-TASVAWEBPR_500x.jpg?v=1711001153",
       title: "Asymmetric Jacket Paired With Kurta And Aligharhi",
       price: "₹14,999",
     },
     {
       id: 5,
-      imgage: serwanisix,
+      imgage:
+        "https://cdn.shopify.com/s/files/1/0606/5864/7273/products/TT28-Oct22530_500x.jpg?v=1640670990",
       title: "Modern Sherwani With Grown Neck Detail",
       price: "₹19,999",
     },
     {
       id: 6,
-      imgage: serwaniseven,
+      imgage:
+        "https://cdn.shopify.com/s/files/1/0606/5864/7273/files/TT29-Oct24381_500x.jpg?v=1702038636",
       title: "Pink Floral Embroidered Sherwani",
       price: "₹34,999",
     },
     {
       id: 7,
-      imgage: serwanieight,
+      imgage:
+        "https://cdn.shopify.com/s/files/1/0606/5864/7273/products/TasvaDay125349_500x.jpg?v=1656049389",
       title: "Peach All Over Embroidered Sherwani",
       price: "₹24,999",
     },
     {
       id: 8,
-      imgage: serwaninine,
+      imgage:
+        "https://cdn.shopify.com/s/files/1/0606/5864/7273/products/TMBURGBA0641-1_f8f36e60-b789-440c-84a2-2b3aa78dfdfa_500x.jpg?v=1641383730",
       title: "Jade Green Brocade Achkan",
       price: "₹14,999",
     },
     {
       id: 9,
-      imgage: serwaniten,
+      imgage:
+        "https://cdn.shopify.com/s/files/1/0606/5864/7273/products/TT29-Oct23830_500x.jpg?v=1640666931",
       title: "Ivory Brocade Gold Sherwani",
       price: "₹12,999",
     },
     {
       id: 10,
-      imgage: serwanieleven,
-      title: "Light Green Brocade Achkan",
-      price: "₹13,999",
-    },
-    {
-      id: 1,
-      imgage: serwanisec,
-      title: "Classic Achkan With Tasva Buttons",
-      price: "₹9,999",
-    },
-    {
-      id: 2,
-      imgage: serwanithr,
-      title: "Asymmetric Jacket Paired With Kurta And Salwar",
-      price: "₹16,999",
-    },
-    {
-      id: 3,
-      imgage: serwanifour,
-      title: "Red Silk Brocade Sherwani",
-      price: "₹39,999",
-    },
-    {
-      id: 4,
-      imgage: serwanififth,
-      title: "Asymmetric Jacket Paired With Kurta And Aligharhi",
-      price: "₹14,999",
-    },
-    {
-      id: 5,
-      imgage: serwanisix,
-      title: "Modern Sherwani With Grown Neck Detail",
-      price: "₹19,999",
-    },
-    {
-      id: 6,
-      imgage: serwaniseven,
-      title: "Pink Floral Embroidered Sherwani",
-      price: "₹34,999",
-    },
-    {
-      id: 7,
-      imgage: serwanieight,
-      title: "Peach All Over Embroidered Sherwani",
-      price: "₹24,999",
-    },
-    {
-      id: 8,
-      imgage: serwaninine,
-      title: "Jade Green Brocade Achkan",
-      price: "₹14,999",
-    },
-    {
-      id: 9,
-      imgage: serwaniten,
-      title: "Ivory Brocade Gold Sherwani",
-      price: "₹12,999",
-    },
-    {
-      id: 10,
-      imgage: serwanieleven,
-      title: "Light Green Brocade Achkan",
-      price: "₹13,999",
-    },
-    {
-      id: 1,
-      imgage: serwanisec,
-      title: "Classic Achkan With Tasva Buttons",
-      price: "₹9,999",
-    },
-    {
-      id: 2,
-      imgage: serwanithr,
-      title: "Asymmetric Jacket Paired With Kurta And Salwar",
-      price: "₹16,999",
-    },
-    {
-      id: 3,
-      imgage: serwanifour,
-      title: "Red Silk Brocade Sherwani",
-      price: "₹39,999",
-    },
-    {
-      id: 4,
-      imgage: serwanififth,
-      title: "Asymmetric Jacket Paired With Kurta And Aligharhi",
-      price: "₹14,999",
-    },
-    {
-      id: 5,
-      imgage: serwanisix,
-      title: "Modern Sherwani With Grown Neck Detail",
-      price: "₹19,999",
-    },
-    {
-      id: 6,
-      imgage: serwaniseven,
-      title: "Pink Floral Embroidered Sherwani",
-      price: "₹34,999",
-    },
-    {
-      id: 7,
-      imgage: serwanieight,
-      title: "Peach All Over Embroidered Sherwani",
-      price: "₹24,999",
-    },
-    {
-      id: 8,
-      imgage: serwaninine,
-      title: "Jade Green Brocade Achkan",
-      price: "₹14,999",
-    },
-    {
-      id: 9,
-      imgage: serwaniten,
-      title: "Ivory Brocade Gold Sherwani",
-      price: "₹12,999",
-    },
-    {
-      id: 10,
-      imgage: serwanieleven,
-      title: "Light Green Brocade Achkan",
-      price: "₹13,999",
-    },
-    {
-      id: 1,
-      imgage: serwanisec,
-      title: "Classic Achkan With Tasva Buttons",
-      price: "₹9,999",
-    },
-    {
-      id: 2,
-      imgage: serwanithr,
-      title: "Asymmetric Jacket Paired With Kurta And Salwar",
-      price: "₹16,999",
-    },
-    {
-      id: 3,
-      imgage: serwanifour,
-      title: "Red Silk Brocade Sherwani",
-      price: "₹39,999",
-    },
-    {
-      id: 4,
-      imgage: serwanififth,
-      title: "Asymmetric Jacket Paired With Kurta And Aligharhi",
-      price: "₹14,999",
-    },
-    {
-      id: 5,
-      imgage: serwanisix,
-      title: "Modern Sherwani With Grown Neck Detail",
-      price: "₹19,999",
-    },
-    {
-      id: 6,
-      imgage: serwaniseven,
-      title: "Pink Floral Embroidered Sherwani",
-      price: "₹34,999",
-    },
-    {
-      id: 7,
-      imgage: serwanieight,
-      title: "Peach All Over Embroidered Sherwani",
-      price: "₹24,999",
-    },
-    {
-      id: 8,
-      imgage: serwaninine,
-      title: "Jade Green Brocade Achkan",
-      price: "₹14,999",
-    },
-    {
-      id: 9,
-      imgage: serwaniten,
-      title: "Ivory Brocade Gold Sherwani",
-      price: "₹12,999",
-    },
-    {
-      id: 10,
-      imgage: serwanieleven,
+      imgage:
+        "https://cdn.shopify.com/s/files/1/0606/5864/7273/products/TasvaDay125204_500x.jpg?v=1656056321",
       title: "Light Green Brocade Achkan",
       price: "₹13,999",
     },
@@ -264,7 +83,7 @@ const NewArrival = () => {
       <div className="lg:pt-40">
         <img
           src={
-            "https://www.tasva.com/cdn/shop/collections/1-Website-banner-1500wx265h_2048x.jpg?v=1667825140"
+            "https://www.tasva.com/cdn/shop/collections/3-Web-banner-1500x500_2048x.jpg?v=1684239798"
           }
           alt=""
         />
@@ -275,15 +94,14 @@ const NewArrival = () => {
             <p>Home</p>
           </Link>
           <p>/</p>
-          <p>Sherwanis & Achkans</p>
+          <p>Bundis & Nehru Jacket</p>
         </div>
       </div>
       <div className="flex flex-col gap-5 lg:p-16 p-4">
-        <p className="text-3xl">New Arrivals</p>
+        <p className="text-3xl">Bundis & Nehru Jacket</p>
         <p className="text-[#4a3f3f]">
-          Do you want to add a touch of elegance and grandeur to your wardrobe?
-          Look no further than Tasva, a brand that brings you an exquisite range
-          of Indian ethnic wear designed to make you stand out on any occasion.
+          A classic Nehru jacket design can elevate your kurta look and add a
+          touch of ethnic charm.
         </p>
         <button>Read More</button>
       </div>
@@ -529,4 +347,4 @@ const NewArrival = () => {
   );
 };
 
-export default NewArrival;
+export default BundisNehruJacket;

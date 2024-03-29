@@ -8,6 +8,7 @@ import assosiries from "../../Asset/ACCESSORIES.png";
 import serwani from "../../Asset/fullserwani.png";
 import upperserwani from "../../Asset/upperserwani.png";
 import downserwanipaijama from "../../Asset/downserwanipaijama.png";
+import { Link, useNavigate } from "react-router-dom";
 
 const Collection = () => {
   const categories = [
@@ -15,31 +16,37 @@ const Collection = () => {
       id: 1,
       img: new_arrival,
       title: "NEW ARRIVALS ➔",
+      to: "/new_arrival",
     },
     {
       id: 2,
       img: Serwani,
       title: "SHERWANI  ➔",
+      to: "/serwani_achkans",
     },
     {
       id: 3,
       img: bandhgala,
       title: "BANDHGALA  ➔",
+      to: "/bandhgala_suits_for_men",
     },
     {
       id: 4,
       img: nehru_jacket,
       title: "BUNDI & NEHRU JACKET  ➔",
+      to: "/bundis_nehru_jacket",
     },
     {
       id: 5,
       img: kurta,
       title: "KURTA ➔",
+      to: "/kurta_bundi",
     },
     {
       id: 6,
       img: assosiries,
       title: "ACCESSORIES   ➔",
+      to: "/assosiries",
     },
   ];
   return (
@@ -52,11 +59,12 @@ const Collection = () => {
               alt=""
               className="hover:scale-110 duration-700 transition-all border-2"
             />
-            <div className="absolute w-full -bottom-0 text-center">
-              <p className="w-1/2 h-10 items-center text-center z-50 hover:bg-white hover:text-black hover:border-[#85754e] flex justify-center text-white ml-24 bg-[#85754e] border">
+
+            <Link to={i.to} className="absolute w-full -bottom-0 text-center">
+              <button className="w-1/2 h-10 items-center text-center z-50 hover:bg-white hover:text-black hover:border-[#85754e] flex justify-center text-white ml-24 bg-[#85754e] border">
                 {i.title}
-              </p>
-            </div>
+              </button>
+            </Link>
           </div>
         ))}
       </div>
@@ -64,7 +72,9 @@ const Collection = () => {
         <div className="flex flex-col gap-5 p-24 justify-center w-[40%]">
           <p className="lg:text-3xl">SHOP THE LOOK</p>
           <p>Style ideas from us to you.</p>
-          <p className="bg-[#82734e] p-4 w-fit text-white text-sm">SHOP NOW</p>
+          <button className="bg-[#82734e] p-4 w-fit text-white text-sm">
+            SHOP NOW
+          </button>
         </div>
         <div>
           <img src={serwani} alt="" />

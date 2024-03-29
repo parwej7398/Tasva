@@ -1,5 +1,7 @@
 import BandhgalaSuitsForMen from "../Components/Bandhgala Suits For Men";
 import BrandStory from "../Components/Brand Story";
+import BundisNehruJacket from "../Components/Bundis & Nehru Jacket";
+import HaldiDressesForMen from "../Components/Haldi Dresses For Men";
 import KurtaBundi from "../Components/KurtaBundi";
 import NewArrival from "../Components/New Arrivals";
 import SerwaniAchkans from "../Components/Sherwanis & Achkans";
@@ -46,18 +48,38 @@ export const routes = [
     element: <NewArrival />,
   },
   {
-    id: 7,
+    id: 8,
     path: "/brand_story",
     element: <BrandStory />,
   },
   {
-    id: 7,
+    id: 9,
     path: "/kurta_bundi",
     element: <KurtaBundi />,
   },
   {
-    id: 7,
+    id: 10,
     path: "/bandhgala_suits_for_men",
     element: <BandhgalaSuitsForMen />,
   },
+  {
+    id: 11,
+    path: "/haldi_dresses_for_men",
+    element: <HaldiDressesForMen />,
+  },
+  {
+    id: 11,
+    path: "/bundis_nehru_jacket",
+    element: <BundisNehruJacket />,
+  },
+  // {
+  //   id: 12,
+  //   path: "/collections/:slug/:id",
+  //   element: <NewArrival />,
+  // },
+  // {
+  //   id: 12,
+  //   path: "/collections/:slug/:id",
+  //   element: <KurtaBundi />,
+  // },
 ];

@@ -24,11 +24,7 @@ const BestSeller = () => {
             <Slider {...settings}>
               {[1, 2, 3].map((i, index) => {
                 return (
-                  <div
-                    className="flex flex-col px-2"
-                    onMouseEnter={() => setHover(index)}
-                    onMouseLeave={() => setHover("")}
-                  >
+                  <div>
                     <Slider
                       arrows={false}
                       autoplay

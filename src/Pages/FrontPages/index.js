@@ -127,7 +127,7 @@ const FrontPages = () => {
           ></iframe>
         </div> */}
 
-        <div className="mb-24">
+        <div className="lg:mb-24">
           <BestSeller />
           <Collection />
         </div>
