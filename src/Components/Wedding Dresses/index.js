@@ -1,261 +1,52 @@
 import React from "react";
-import serwanisec from "../../SerwaniPhoto/SerwaniSecond.png";
-import serwanithr from "../../SerwaniPhoto/SerwaniThrid.png";
-import serwanifour from "../../SerwaniPhoto/SerwaniFourth.png";
-import serwanififth from "../../SerwaniPhoto/SerwaniFifth.png";
-import serwanisix from "../../SerwaniPhoto/SerwaniSix.png";
-import serwaniseven from "../../SerwaniPhoto/SerwaniSeven.png";
-import serwanieight from "../../SerwaniPhoto/SerwaniEight.png";
-import serwaninine from "../../SerwaniPhoto/SerwaniNine.png";
-import serwaniten from "../../SerwaniPhoto/SerwaniTen.png";
-import serwanieleven from "../../SerwaniPhoto/SrwaniEleven.png";
+
 import { Accordion, AccordionDetails, AccordionSummary } from "@mui/material";
 import { Add } from "@mui/icons-material";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const NewArrival = () => {
-  const { id, slug } = useParams();
-  console.log(id, slug);
+const WeddingDresses = () => {
   const categories = [
     {
       id: 1,
-      imgage: serwanisec,
+      imgage:
+        "https://cdn.shopify.com/s/files/1/0606/5864/7273/products/TT29-Oct24258_500x.jpg?v=1697707563",
       title: "Classic Achkan With Tasva Buttons",
       price: "₹9,999",
     },
     {
       id: 2,
-      imgage: serwanithr,
+      imgage:
+        "https://cdn.shopify.com/s/files/1/0606/5864/7273/products/TT28-Oct22698_500x.jpg?v=1640674245",
       title: "Asymmetric Jacket Paired With Kurta And Salwar",
       price: "₹16,999",
     },
     {
       id: 3,
-      imgage: serwanifour,
+      imgage:
+        "https://cdn.shopify.com/s/files/1/0606/5864/7273/files/523-TASVAWEBPR_500x.jpg?v=1710997802",
       title: "Red Silk Brocade Sherwani",
       price: "₹39,999",
     },
     {
       id: 4,
-      imgage: serwanififth,
+      imgage:
+        "https://cdn.shopify.com/s/files/1/0606/5864/7273/products/TT29-Oct25457_500x.jpg?v=1640591346",
       title: "Asymmetric Jacket Paired With Kurta And Aligharhi",
       price: "₹14,999",
     },
     {
       id: 5,
-      imgage: serwanisix,
+      imgage:
+        "https://cdn.shopify.com/s/files/1/0606/5864/7273/products/TT29-Oct25358_500x.jpg?v=1640591579",
       title: "Modern Sherwani With Grown Neck Detail",
       price: "₹19,999",
     },
     {
       id: 6,
-      imgage: serwaniseven,
+      imgage:
+        "https://cdn.shopify.com/s/files/1/0606/5864/7273/products/TMBDRGPA0254_04634a13-fdcb-4e47-b455-feccefeb6cb9_500x.jpg?v=1638298159",
       title: "Pink Floral Embroidered Sherwani",
       price: "₹34,999",
-    },
-    {
-      id: 7,
-      imgage: serwanieight,
-      title: "Peach All Over Embroidered Sherwani",
-      price: "₹24,999",
-    },
-    {
-      id: 8,
-      imgage: serwaninine,
-      title: "Jade Green Brocade Achkan",
-      price: "₹14,999",
-    },
-    {
-      id: 9,
-      imgage: serwaniten,
-      title: "Ivory Brocade Gold Sherwani",
-      price: "₹12,999",
-    },
-    {
-      id: 10,
-      imgage: serwanieleven,
-      title: "Light Green Brocade Achkan",
-      price: "₹13,999",
-    },
-    {
-      id: 1,
-      imgage: serwanisec,
-      title: "Classic Achkan With Tasva Buttons",
-      price: "₹9,999",
-    },
-    {
-      id: 2,
-      imgage: serwanithr,
-      title: "Asymmetric Jacket Paired With Kurta And Salwar",
-      price: "₹16,999",
-    },
-    {
-      id: 3,
-      imgage: serwanifour,
-      title: "Red Silk Brocade Sherwani",
-      price: "₹39,999",
-    },
-    {
-      id: 4,
-      imgage: serwanififth,
-      title: "Asymmetric Jacket Paired With Kurta And Aligharhi",
-      price: "₹14,999",
-    },
-    {
-      id: 5,
-      imgage: serwanisix,
-      title: "Modern Sherwani With Grown Neck Detail",
-      price: "₹19,999",
-    },
-    {
-      id: 6,
-      imgage: serwaniseven,
-      title: "Pink Floral Embroidered Sherwani",
-      price: "₹34,999",
-    },
-    {
-      id: 7,
-      imgage: serwanieight,
-      title: "Peach All Over Embroidered Sherwani",
-      price: "₹24,999",
-    },
-    {
-      id: 8,
-      imgage: serwaninine,
-      title: "Jade Green Brocade Achkan",
-      price: "₹14,999",
-    },
-    {
-      id: 9,
-      imgage: serwaniten,
-      title: "Ivory Brocade Gold Sherwani",
-      price: "₹12,999",
-    },
-    {
-      id: 10,
-      imgage: serwanieleven,
-      title: "Light Green Brocade Achkan",
-      price: "₹13,999",
-    },
-    {
-      id: 1,
-      imgage: serwanisec,
-      title: "Classic Achkan With Tasva Buttons",
-      price: "₹9,999",
-    },
-    {
-      id: 2,
-      imgage: serwanithr,
-      title: "Asymmetric Jacket Paired With Kurta And Salwar",
-      price: "₹16,999",
-    },
-    {
-      id: 3,
-      imgage: serwanifour,
-      title: "Red Silk Brocade Sherwani",
-      price: "₹39,999",
-    },
-    {
-      id: 4,
-      imgage: serwanififth,
-      title: "Asymmetric Jacket Paired With Kurta And Aligharhi",
-      price: "₹14,999",
-    },
-    {
-      id: 5,
-      imgage: serwanisix,
-      title: "Modern Sherwani With Grown Neck Detail",
-      price: "₹19,999",
-    },
-    {
-      id: 6,
-      imgage: serwaniseven,
-      title: "Pink Floral Embroidered Sherwani",
-      price: "₹34,999",
-    },
-    {
-      id: 7,
-      imgage: serwanieight,
-      title: "Peach All Over Embroidered Sherwani",
-      price: "₹24,999",
-    },
-    {
-      id: 8,
-      imgage: serwaninine,
-      title: "Jade Green Brocade Achkan",
-      price: "₹14,999",
-    },
-    {
-      id: 9,
-      imgage: serwaniten,
-      title: "Ivory Brocade Gold Sherwani",
-      price: "₹12,999",
-    },
-    {
-      id: 10,
-      imgage: serwanieleven,
-      title: "Light Green Brocade Achkan",
-      price: "₹13,999",
-    },
-    {
-      id: 1,
-      imgage: serwanisec,
-      title: "Classic Achkan With Tasva Buttons",
-      price: "₹9,999",
-    },
-    {
-      id: 2,
-      imgage: serwanithr,
-      title: "Asymmetric Jacket Paired With Kurta And Salwar",
-      price: "₹16,999",
-    },
-    {
-      id: 3,
-      imgage: serwanifour,
-      title: "Red Silk Brocade Sherwani",
-      price: "₹39,999",
-    },
-    {
-      id: 4,
-      imgage: serwanififth,
-      title: "Asymmetric Jacket Paired With Kurta And Aligharhi",
-      price: "₹14,999",
-    },
-    {
-      id: 5,
-      imgage: serwanisix,
-      title: "Modern Sherwani With Grown Neck Detail",
-      price: "₹19,999",
-    },
-    {
-      id: 6,
-      imgage: serwaniseven,
-      title: "Pink Floral Embroidered Sherwani",
-      price: "₹34,999",
-    },
-    {
-      id: 7,
-      imgage: serwanieight,
-      title: "Peach All Over Embroidered Sherwani",
-      price: "₹24,999",
-    },
-    {
-      id: 8,
-      imgage: serwaninine,
-      title: "Jade Green Brocade Achkan",
-      price: "₹14,999",
-    },
-    {
-      id: 9,
-      imgage: serwaniten,
-      title: "Ivory Brocade Gold Sherwani",
-      price: "₹12,999",
-    },
-    {
-      id: 10,
-      imgage: serwanieleven,
-      title: "Light Green Brocade Achkan",
-      price: "₹13,999",
     },
   ];
   return (
@@ -263,26 +54,29 @@ const NewArrival = () => {
       <div className="lg:pt-32">
         <img
           src={
-            "https://www.tasva.com/cdn/shop/collections/1-Website-banner-1500wx265h_2048x.jpg?v=1667825140"
+            "https://www.tasva.com/cdn/shop/collections/Untitled_2048x.png?v=1650362188"
           }
           alt=""
         />
       </div>
       <div>
-        <div className="flex p-4 px-[5%]">
+        <div className="flex *:p-1 p-4 lg:px-[5%]">
           <Link to={"/"}>
             <p>Home</p>
           </Link>
           <p>/</p>
-          <p>Sherwanis & Achkans</p>
+          <p>Wedding Dresses</p>
         </div>
       </div>
       <div className="flex flex-col gap-5 lg:p-16 p-4">
-        <p className="text-3xl">New Arrivals</p>
+        <p className="text-3xl">Wedding Dresses</p>
         <p className="text-[#4a3f3f]">
-          Do you want to add a touch of elegance and grandeur to your wardrobe?
-          Look no further than Tasva, a brand that brings you an exquisite range
-          of Indian ethnic wear designed to make you stand out on any occasion.
+          As the wedding bells chime, every groom deserves to look his regal
+          best. At Tasva, we ensure that every man walks down the aisle or takes
+          the ritualistic pheras in a style that speaks volumes of his persona
+          while perfectly in tune with Indian heritage. Discover the epitome of
+          elegance and tradition with Tasva’s exclusive collection of Indian
+          wedding dresses for men.
         </p>
         <button>Read More</button>
       </div>
@@ -434,16 +228,16 @@ const NewArrival = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col max-lg:text-center gap-3 px-[2%]">
+        <div className="flex flex-col gap-3 px-[2%]">
           <div className="flex justify-end items-center gap-5 ">
-            <p>585 products</p>
-            <p className="max-lg:hidden">⇅ Sort By Date, New to Old</p>
+            <p>6 products</p>
+            <p className="max-lg:hidden">⇅ Sort By Featured</p>
           </div>
           <div className="grid lg:grid-cols-4 grid-cols-2 gap-4 ">
             {categories.map((event) => (
               <div>
                 <img src={event.imgage} alt="" />
-                <p className="max-lg:text-sm">{event.title}</p>
+                <p>{event.title}</p>
                 <p>{event.price}</p>
               </div>
             ))}
@@ -451,68 +245,54 @@ const NewArrival = () => {
         </div>
       </div>
       <div className="flex flex-col lg:gap-5 gap-2 bg-[#f5f5f5] lg:p-10 p-4">
+        <p className="lg:text-lg font-semibold">
+          Types Of Wedding Dress For Men
+        </p>
         <p className="max-lg:text-sm">
-          Are you looking for sherwanis to wear during the day? We recommend
-          that you choose sherwani colours that add radiance to your overall
-          look, probably prints that are vibrant too. On the other hand, pick
-          embellished sherwanis for a regal evening look. Brocade mojaris,
-          gemstone encrusted brooches are great add-ons. Find exquisite groom
-          wear options online at Tasva and find outfits in the most vibrant
-          hues, motifs that are inspired by vintage fashion and embellishments
-          that showcase the intricacies of craftsmanship.
+          Whether you envision a wedding in traditional rituals or a
+          contemporary celebration, our wedding attires are designed to
+          complement every style and preference.
         </p>
         <p className="lg:text-lg font-semibold">
-          Sherwanis are Classics that Never Go Out of Style
+          Printed Wedding Outfit For Men
         </p>
         <p className="max-lg:text-sm">
-          Are you looking for sherwanis to wear during the day? We recommend
-          that you choose sherwani colours that add radiance to your overall
-          look, probably prints that are vibrant too. On the other hand, pick
-          embellished sherwanis for a regal evening look. Brocade mojaris,
-          gemstone encrusted brooches are great add-ons. Find exquisite groom
-          wear options online at Tasva and find outfits in the most vibrant
-          hues, motifs that are inspired by vintage fashion and embellishments
-          that showcase the intricacies of craftsmanship.
+          For the man who dares to don a touch of whimsy, our printed wedding
+          dresses for men are a perfect choice. From the subtlety of pastel
+          florals to the vibrancy of ethnic motifs, each piece is a canvas that
+          reflects your personality. Get ready to stand out in our Mint Jacquard
+          Bandhgala or make a stylish statement with the All-Over Printed Kurta
+          Bundi Set and set the bar high this wedding season.
         </p>
         <p className="lg:text-lg font-semibold">
-          Ace the Classic Achkan Look with the Right Accessories
+          Textured Wedding Outfit For Men
         </p>
         <p className="max-lg:text-sm">
-          Keeping up with the latest trends in wedding wear can be tough. Every
-          season the tones of the outfits change and the print patterns evolve
-          over time. If you want to indulge in silhouettes and styles that are
-          in-trend and suit your personality, browse our online store and
-          consider your options among the trendy achkans. You can choose to wear
-          it unbuttoned with a kurta underneath. We have a range of pure silk
-          embellished achkans that feature Aari embroidery and present a number
-          of opportunities for pairing with trousers and brocade mojaris.
+          Texture adds a tangible charm to any attire, and Tasva’s textured
+          wedding dresses for men are a class apart. Indulge in the richness of
+          an Orange Textured Kurta Set or the understated sophistication of a
+          Beige Quilted Sherwani, each designed to give you a distinguished
+          look.
         </p>
-        <p className="lg:text-lg font-semibold">Don’t Forget Accessories!</p>
-        <p className="max-lg:text-sm">
-          Interesting details to add to your sherwani or achkan include
-          brooches, malas, sarpeches and pocket squares or safas. From multiple
-          strands of malas to mojaris that best complement your attire, you can
-          curate diverse looks for festive occasions. We encourage you to keep
-          the silhouettes and colour palettes distinctly different from each
-          other when you are putting together a wedding or a festive wardrobe.
-        </p>
-        <p className="max-lg:text-sm">
-          Achkan for Groom | Bandhgala for Men | Wedding Reception Dress |
-          Mojaris for Men | Wedding Wear for Men | Groom Dress for Wedding |
-          Sarpech's for men | Wedding Sherwani | Hand Shawl with Sherwani |
-          Sherwani Mala for Groom
+        <p className="max-lg:text-lg">
+          Embroidery is not just detail; it’s a narrative of craftsmanship. Our
+          meticulously embroidered men’s wedding dresses, like the Ivory Resham
+          Embroidered Achkan and the Ivory Brocade Zardozi Embroidered Sherwani,
+          boast traditional techniques with a modern twist, perfect for your
+          momentous occasion.{" "}
         </p>
         <button className="lg:text-lg font-semibold">
           FAQs On The Sherwanis & Achkans
         </button>
         <p className="lg:text-xl font-semibold">
-          What Is The Difference Between A Sherwani And An Achkan?
+          What Are The Factors To Consider While Shopping For Mens Wedding Wear?
         </p>
         <p className="max-lg:text-sm">
-          The main difference between these two outfits are the length of the
-          garment, fabric used and the flare from the waist. Sherwanis are
-          longer and flared from the waist onwards. Achkans are shorter and they
-          are usually fitted.
+          It is recommended that the groom try to blend outfit options
+          harmoniously with the bride’s style. The coordination of outfits
+          ensures that you stand out as a well-suited couple. Accessories play
+          an important role in enhancing your overall look. Keep up with the
+          style trends and select your wedding wear outfits according to that.
         </p>
         <p className="hover:underline cursor-pointer text-[#595754]">
           Read More
@@ -528,4 +308,4 @@ const NewArrival = () => {
   );
 };
 
-export default NewArrival;
+export default WeddingDresses;

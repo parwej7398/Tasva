@@ -80,7 +80,7 @@ const BundisNehruJacket = () => {
   ];
   return (
     <>
-      <div className="lg:pt-40">
+      <div className="lg:pt-32">
         <img
           src={
             "https://www.tasva.com/cdn/shop/collections/3-Web-banner-1500x500_2048x.jpg?v=1684239798"
@@ -89,7 +89,7 @@ const BundisNehruJacket = () => {
         />
       </div>
       <div>
-        <div className="flex p-4 px-[5%]">
+        <div className="flex *:p-1 p-4 px-[5%]">
           <Link to={"/"}>
             <p>Home</p>
           </Link>
@@ -106,7 +106,7 @@ const BundisNehruJacket = () => {
         <button>Read More</button>
       </div>
       <div className="flex ">
-        <div className="w-[30%]">
+        <div className="lg:w-[30%]">
           <div className="flex max-lg:hidden justify-between px-[10%]">
             <p>FILTER BY</p>
             <p>CLEAR</p>

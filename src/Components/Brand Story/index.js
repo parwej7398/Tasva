@@ -11,7 +11,7 @@ const BrandStory = () => {
         <p>/</p>
         <p>Brand Story</p>
       </div>
-      <div className="flex flex-col gap-5 px-[25%] p-20">
+      <div className="flex flex-col gap-5 lg:px-[25%] lg:p-20 p-4">
         <button className="text-5xl font-semibold font-serif">
           Brand Story
         </button>

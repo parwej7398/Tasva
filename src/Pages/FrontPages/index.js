@@ -22,7 +22,7 @@ const FrontPages = () => {
   };
   return (
     <>
-      <div className="pt-40 max-lg:hidden">
+      <div className="pt-32 max-lg:hidden">
         <div className="slider-container">
           <Slider {...settings}>
             <div>
@@ -31,12 +31,12 @@ const FrontPages = () => {
               </Link>
             </div>
             <div>
-              <Link>
+              <Link to={"/bandhgala_suits_for_men"}>
                 <img src={img4} className="h-[35rem] w-[100%]" />
               </Link>
             </div>
             <div>
-              <Link>
+              <Link to={"/kurta_bundi"}>
                 <img src={img3} className="h-[35rem] w-[100%]" />
               </Link>
             </div>

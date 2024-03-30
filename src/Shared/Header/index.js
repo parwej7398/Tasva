@@ -96,7 +96,9 @@ const Header = () => {
           </div>
 
           <div className="flex flex-col relative py-5 group">
-            <p className="cursor-pointer hover:underline ">ACCESSORIES</p>
+            <Link to={"/accessories"}>
+              <p className="cursor-pointer hover:underline ">ACCESSORIES</p>
+            </Link>
             <div className="absolute top-12 z-50 p-2 w-[60rem] !text-black border shadow bg-white hidden group-hover:block">
               <div className="flex justify-around">
                 <div className="flex flex-col gap-5">
@@ -201,7 +203,9 @@ const Header = () => {
           </div>
 
           <div className="flex flex-col relative py-5 group">
-            <p className="cursor-pointer hover:underline ">WEDDING</p>
+            <Link to={"/wedding_dresses"}>
+              <p className="cursor-pointer hover:underline ">WEDDING</p>
+            </Link>
             <div className="absolute top-12 z-50 p-2 w-52 !text-black border shadow bg-white hidden group-hover:block">
               <div>
                 <p className="hover:text-[#72706d] p-2 cursor-pointer">
@@ -265,13 +269,15 @@ const Header = () => {
                 </IconButton>
               </ListItem>
               <Divider />
-              <Link onClick={() => setOpen(false)}>
+              <Link to={"/new_arrival"} onClick={() => setOpen(false)}>
                 <ListItemButton>NEW ARRIVALS</ListItemButton>
                 <Divider />
               </Link>
               <Accordion elevation={0}>
                 <AccordionSummary>
-                  <p>KURTAS & BUNDIS</p>
+                  <Link to={"/kurta_bundi"}>
+                    <p onClick={() => setOpen(false)}>KURTAS & BUNDIS</p>
+                  </Link>
                 </AccordionSummary>
                 <AccordionDetails>
                   <span className="flex flex-col gap-4">
@@ -308,7 +314,9 @@ const Header = () => {
 
               <Accordion elevation={0}>
                 <AccordionSummary>
-                  <p>SHERWANIS & ACHKANS</p>
+                  <Link to={"/serwani_achkans"}>
+                    <p onClick={() => setOpen(false)}>SHERWANIS & ACHKANS</p>
+                  </Link>
                 </AccordionSummary>
                 <AccordionDetails className="!outline-none">
                   <span className="flex flex-col gap-4">
@@ -324,7 +332,9 @@ const Header = () => {
 
               <Accordion elevation={0}>
                 <AccordionSummary>
-                  <p>OCCASION WEAR</p>
+                  <Link to={"/"}>
+                    <p onClick={() => setOpen(false)}>OCCASION WEAR</p>
+                  </Link>
                 </AccordionSummary>
                 <AccordionDetails className="!outline-none">
                   <span className="flex flex-col gap-4">
@@ -346,7 +356,9 @@ const Header = () => {
 
               <Accordion elevation={0}>
                 <AccordionSummary>
-                  <p>WEDDING</p>
+                  <Link to={"/wedding_dresses"}>
+                    <p onClick={() => setOpen(false)}>WEDDING</p>
+                  </Link>
                 </AccordionSummary>
                 <AccordionDetails className="!outline-none">
                   <span className="flex flex-col gap-4">
@@ -362,11 +374,13 @@ const Header = () => {
 
               <Accordion elevation={0}>
                 <AccordionSummary>
-                  <p>BRAND</p>
+                  <Link to={"/brand_story"}>
+                    <p onClick={() => setOpen(false)}>BRAND</p>
+                  </Link>
                 </AccordionSummary>
                 <AccordionDetails className="!outline-none">
                   <span className="flex flex-col gap-4">
-                    <Link>
+                    <Link to={"/"}>
                       <p onClick={() => setOpen(false)}> OUR STORY</p>
                     </Link>
                   </span>
@@ -377,6 +391,7 @@ const Header = () => {
                 <Link to="https://www.tasva.com/pages/store-locator">
                   <ListItemButton>STORE LOCATION</ListItemButton>
                 </Link>
+
                 <Link to={"/contact_us"}>
                   <ListItemButton>CONTACT US</ListItemButton>
                 </Link>

@@ -1,3 +1,4 @@
+import { TextField } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -26,10 +27,13 @@ const ContactUs = () => {
             className="border lg:w-[30rem] w-full p-2"
             placeholder="Email"
           />
-          <input
+
+          <TextField
+            multiline
+            rows={3}
             type="text"
-            className="border lg:w-[30rem] w-full p-2"
-            placeholder="Message"
+            placeholder="Message.."
+            className=" lg:w-[30rem] w-full"
           />
 
           <p className="border lg:w-[30rem] w-full text-center p-2 bg-[#82734e] text-white">
