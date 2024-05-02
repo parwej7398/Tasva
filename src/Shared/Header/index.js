@@ -27,7 +27,7 @@ const Header = () => {
   return (
     <>
       <div className="fixed w-full z-50 max-lg:hidden">
-        <div className="bg-[#dbd7d0] cursor-pointer">
+        <div className="bg-gradient-to-br from-blue-300  via-purple-200 to-pink-400 z-50 w-full border-b text-sm tracking-wide cursor-pointer">
           <p className="text-xs text-center p-3 tracking-widest">
             FREE SHIPPING ON ALL ORDERS PAN INDIA
           </p>
@@ -47,16 +47,20 @@ const Header = () => {
             </Link>
           </div>
         </div>
-        <div className="flex justify-between bg-white z-50 w-full border-b text-sm tracking-wide p-2 items-center">
+        <div className="flex justify-between bg-gradient-to-br text-white font-serif italic from-blue-500 via-purple-500 to-pink-500 z-50 w-full border-b text-sm tracking-wide p-2 items-center">
           <Link to={"/"}>
             <img src={tasva_logo} alt="" className="h-14" />
           </Link>
           <Link to={"/new_arrival"}>
-            <p className="hover:underline cursor-pointer">NEW ARRIVALS</p>
+            <p className="hover:underline cursor-pointer font-semibold text-sm">
+              NEW ARRIVALS
+            </p>
           </Link>
           <div className="flex flex-col relative py-5 group">
             <Link to={"/kurta_bundi"}>
-              <p className="cursor-pointer hover:underline ">KURTAS & BUNDIS</p>
+              <p className="cursor-pointer hover:underline font-semibold text-sm">
+                KURTAS & BUNDIS
+              </p>
             </Link>
             <div className="absolute top-12 z-50 p-2 w-52 !text-black border shadow bg-white hidden group-hover:block">
               <div>
@@ -84,7 +88,9 @@ const Header = () => {
 
           <div className="flex flex-col relative py-5 group">
             <Link to={"/bandhgala_suits_for_men"}>
-              <p className="cursor-pointer hover:underline ">BANDHGALAS</p>
+              <p className="cursor-pointer hover:underline font-semibold text-sm">
+                BANDHGALAS
+              </p>
             </Link>
             <div className="absolute top-12 z-50 p-2 w-52 !text-black border shadow bg-white hidden group-hover:block">
               <div>
@@ -97,12 +103,14 @@ const Header = () => {
 
           <div className="flex flex-col relative py-5 group">
             <Link to={"/accessories"}>
-              <p className="cursor-pointer hover:underline ">ACCESSORIES</p>
+              <p className="cursor-pointer hover:underline font-semibold text-sm">
+                ACCESSORIES
+              </p>
             </Link>
             <div className="absolute top-12 z-50 p-2 w-[60rem] !text-black border shadow bg-white hidden group-hover:block">
               <div className="flex justify-around">
                 <div className="flex flex-col gap-5">
-                  <div className="text-xs font-semibold cursor-pointer">
+                  <div className="text-xs font-semibold cursor-pointer ">
                     <p>JEWELLERY</p>
                   </div>
                   <div className="text-xs font-semibold cursor-pointer flex flex-col gap-2">
@@ -157,7 +165,7 @@ const Header = () => {
 
           <div className="flex flex-col relative py-5 group">
             <Link to={"/serwani_achkans"}>
-              <p className="cursor-pointer hover:underline ">
+              <p className="cursor-pointer hover:underline font-semibold text-sm">
                 SHERWANIS & ACHKANS
               </p>
             </Link>
@@ -177,7 +185,9 @@ const Header = () => {
           </div>
 
           <div className="flex flex-col relative py-5 group">
-            <p className="cursor-pointer hover:underline ">OCCASION WEAR</p>
+            <p className="cursor-pointer hover:underline font-semibold text-sm">
+              OCCASION WEAR
+            </p>
             <div className="absolute top-12 z-50 p-2 w-52 !text-black border shadow bg-white hidden group-hover:block">
               <div>
                 <p className="hover:text-[#72706d] p-2 cursor-pointer">
@@ -204,7 +214,9 @@ const Header = () => {
 
           <div className="flex flex-col relative py-5 group">
             <Link to={"/wedding_dresses"}>
-              <p className="cursor-pointer hover:underline ">WEDDING</p>
+              <p className="cursor-pointer hover:underline font-semibold text-sm">
+                WEDDING
+              </p>
             </Link>
             <div className="absolute top-12 z-50 p-2 w-52 !text-black border shadow bg-white hidden group-hover:block">
               <div>
@@ -222,7 +234,9 @@ const Header = () => {
 
           <div className="flex flex-col relative py-5 group">
             <Link to={"/brand_story"}>
-              <p className="cursor-pointer hover:underline ">BRAND</p>
+              <p className="cursor-pointer hover:underline font-semibold text-sm">
+                BRAND
+              </p>
             </Link>
             <div className="absolute top-12 z-50 p-2 w-52 !text-black border shadow bg-white hidden group-hover:block">
               <div>
@@ -237,9 +251,10 @@ const Header = () => {
 
           <div>
             <IconButton>
-              <LocalMallOutlined />
+              <LocalMallOutlined className="!text-white" />
             </IconButton>
           </div>
+
           <img src={aditya_birla} alt="" className="h-20" />
         </div>
       </div>

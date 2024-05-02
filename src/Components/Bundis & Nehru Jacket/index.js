@@ -11,71 +11,71 @@ const BundisNehruJacket = () => {
       id: 1,
       imgage:
         "https://cdn.shopify.com/s/files/1/0606/5864/7273/files/228-TASVAWEBPR_500x.jpg?v=1711000753",
-      title: "Classic Achkan With Tasva Buttons",
-      price: "₹9,999",
+      title: "Printed Bundi",
+      price: "₹2,999",
     },
     {
       id: 2,
       imgage:
         "https://cdn.shopify.com/s/files/1/0606/5864/7273/files/77-TASVAWEBPR_500x.jpg?v=1711000947",
-      title: "Asymmetric Jacket Paired With Kurta And Salwar",
-      price: "₹16,999",
+      title: "Embroidered Jacquard Bundi",
+      price: "₹3,999",
     },
     {
       id: 3,
       imgage:
         "https://cdn.shopify.com/s/files/1/0606/5864/7273/files/112-TASVAWEBPR_500x.jpg?v=1711001038",
-      title: "Red Silk Brocade Sherwani",
-      price: "₹39,999",
+      title: "Classic Jacquard Bundi",
+      price: "₹2,999",
     },
     {
       id: 4,
       imgage:
         "https://cdn.shopify.com/s/files/1/0606/5864/7273/files/361-TASVAWEBPR_500x.jpg?v=1711001153",
-      title: "Asymmetric Jacket Paired With Kurta And Aligharhi",
-      price: "₹14,999",
+      title: "Navy Quilted Bundi",
+      price: "₹3,999",
     },
     {
       id: 5,
       imgage:
         "https://cdn.shopify.com/s/files/1/0606/5864/7273/products/TT28-Oct22530_500x.jpg?v=1640670990",
-      title: "Modern Sherwani With Grown Neck Detail",
-      price: "₹19,999",
+      title: "Yellow Classic Bundi",
+      price: "₹3,999",
     },
     {
       id: 6,
       imgage:
         "https://cdn.shopify.com/s/files/1/0606/5864/7273/files/TT29-Oct24381_500x.jpg?v=1702038636",
-      title: "Pink Floral Embroidered Sherwani",
-      price: "₹34,999",
+      title: "Ivory Textured Bundi",
+      price: "₹3,999",
     },
     {
       id: 7,
       imgage:
         "https://cdn.shopify.com/s/files/1/0606/5864/7273/products/TasvaDay125349_500x.jpg?v=1656049389",
-      title: "Peach All Over Embroidered Sherwani",
-      price: "₹24,999",
+      title: "Teal Jacquard Bundi",
+      price: "₹3,999",
     },
     {
       id: 8,
       imgage:
         "https://cdn.shopify.com/s/files/1/0606/5864/7273/products/TMBURGBA0641-1_f8f36e60-b789-440c-84a2-2b3aa78dfdfa_500x.jpg?v=1641383730",
-      title: "Jade Green Brocade Achkan",
-      price: "₹14,999",
+      title: "Gold Quilted Bundi",
+      price: "₹5,999",
     },
     {
       id: 9,
       imgage:
         "https://cdn.shopify.com/s/files/1/0606/5864/7273/products/TT29-Oct23830_500x.jpg?v=1640666931",
-      title: "Ivory Brocade Gold Sherwani",
+      title: "Yellow Jacquard Bundi",
       price: "₹12,999",
     },
     {
       id: 10,
       imgage:
         "https://cdn.shopify.com/s/files/1/0606/5864/7273/products/TasvaDay125204_500x.jpg?v=1656056321",
-      title: "Light Green Brocade Achkan",
-      price: "₹13,999",
+      title: "Bundi With Single Frogging Button",
+      price: "₹4,999",
     },
   ];
   return (
@@ -255,13 +255,17 @@ const BundisNehruJacket = () => {
         </div>
         <div className="flex flex-col max-lg:text-center gap-3 px-[2%]">
           <div className="flex justify-end items-center gap-5 ">
-            <p>585 products</p>
+            <p>76 products</p>
             <p className="max-lg:hidden">⇅ Sort By Date, New to Old</p>
           </div>
           <div className="grid lg:grid-cols-4 grid-cols-2 gap-4 ">
             {categories.map((event) => (
               <div>
-                <img src={event.imgage} alt="" />
+                <img
+                  src={event.imgage}
+                  alt=""
+                  className="lg:h-[25rem] lg:w-96"
+                />
                 <p className="max-lg:text-sm">{event.title}</p>
                 <p>{event.price}</p>
               </div>

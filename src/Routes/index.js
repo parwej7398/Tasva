@@ -5,14 +5,17 @@ import BundisNehruJacket from "../Components/Bundis & Nehru Jacket";
 import HaldiDressesForMen from "../Components/Haldi Dresses For Men";
 import KurtaBundi from "../Components/KurtaBundi";
 import NewArrival from "../Components/New Arrivals";
+import ProductDetails from "../Components/ProductDetails";
 import SerwaniAchkans from "../Components/Sherwanis & Achkans";
 import ShopTheLook from "../Components/Shop The Look";
 import WeddingDresses from "../Components/Wedding Dresses";
 import BestSeller from "../Pages/BestSeller";
+import Checkout from "../Pages/Checkout";
 import Collection from "../Pages/Collection";
 import Contact from "../Pages/Contact";
 import ContactUs from "../Pages/ContactUs";
 import FrontPages from "../Pages/FrontPages";
+import Product from "../Product";
 
 export const routes = [
   {
@@ -71,33 +74,38 @@ export const routes = [
     element: <HaldiDressesForMen />,
   },
   {
-    id: 11,
+    id: 12,
     path: "/bundis_nehru_jacket",
     element: <BundisNehruJacket />,
   },
   {
-    id: 11,
+    id: 13,
     path: "/accessories",
     element: <Accessories />,
   },
   {
-    id: 11,
+    id: 14,
     path: "/shop_the_look",
     element: <ShopTheLook />,
   },
   {
-    id: 11,
+    id: 15,
     path: "/wedding_dresses",
     element: <WeddingDresses />,
   },
-  // {
-  //   id: 12,
-  //   path: "/collections/:slug/:id",
-  //   element: <NewArrival />,
-  // },
-  // {
-  //   id: 12,
-  //   path: "/collections/:slug/:id",
-  //   element: <KurtaBundi />,
-  // },
+  {
+    id: 16,
+    path: "/product/:category_id",
+    element: <Product />,
+  },
+  {
+    id: 17,
+    path: "/product/:product_id/:variant_id",
+    element: <ProductDetails />,
+  },
+  {
+    id: 18,
+    path: "/checkout/:variant_id",
+    element: <Checkout />,
+  },
 ];

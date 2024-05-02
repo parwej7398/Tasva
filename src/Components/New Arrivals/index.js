@@ -269,7 +269,7 @@ const NewArrival = () => {
         />
       </div>
       <div>
-        <div className="flex p-4 px-[5%]">
+        <div className="flex p-4 px-[5%] *:p-1">
           <Link to={"/"}>
             <p>Home</p>
           </Link>
@@ -436,7 +436,7 @@ const NewArrival = () => {
         </div>
         <div className="flex flex-col max-lg:text-center gap-3 px-[2%]">
           <div className="flex justify-end items-center gap-5 ">
-            <p>585 products</p>
+            <p>40 products</p>
             <p className="max-lg:hidden">⇅ Sort By Date, New to Old</p>
           </div>
           <div className="grid lg:grid-cols-4 grid-cols-2 gap-4 ">

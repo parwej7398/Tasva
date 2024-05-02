@@ -1,18 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import BestSeller from "../BestSeller";
 import Collection from "../Collection";
-import img from "../../Asset/ranveerkpur.png";
-import img2 from "../../Asset/serani.png";
-import img3 from "../../Asset/yellokurta.png";
-import img4 from "../../Asset/imges.png";
-import { Link } from "react-router-dom";
+import { axiosInstance } from "../../Configs/axios.config";
 
 const FrontPages = () => {
+  const [data, setData] = useState([]);
+  const getPostFn = async () => {
+    const response = await axiosInstance.get("/api/slider-list/");
+    console.log(response);
+    setData(response.data.data);
+  };
+
   var settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     autoplay: true,
@@ -20,34 +23,25 @@ const FrontPages = () => {
     autoplaySpeed: 3000,
     slidesToScroll: 1,
   };
+  useEffect(() => {
+    getPostFn();
+  }, []);
+  console.log(data);
   return (
     <>
       <div className="pt-32 max-lg:hidden">
         <div className="slider-container">
           <Slider {...settings}>
-            <div>
-              <Link to={"/serwani_achkans"}>
-                <img src={img} className="h-[35rem] w-[100%]" />
-              </Link>
-            </div>
-            <div>
-              <Link to={"/bandhgala_suits_for_men"}>
-                <img src={img4} className="h-[35rem] w-[100%]" />
-              </Link>
-            </div>
-            <div>
-              <Link to={"/kurta_bundi"}>
-                <img src={img3} className="h-[35rem] w-[100%]" />
-              </Link>
-            </div>
-            <div>
-              <Link to={"/serwani_achkans"}>
-                <img src={img2} className="h-[35rem] w-[100%]" />
-              </Link>
-            </div>
+            {data?.map((i, index) => {
+              return (
+                <div key={index}>
+                  <img src={i.image} />
+                </div>
+              );
+            })}
           </Slider>
         </div>
-        <div className=" px-[10%] lg:p-10">
+        {/* <div className=" px-[10%] lg:p-10">
           <iframe
             autoPlay
             muted
@@ -57,7 +51,7 @@ const FrontPages = () => {
             src="https://www.youtube.com/embed/Sz017ewJ1T4?iv_load_policy=3&modestbranding=1&autoplay=0&loop=0&playlist=Sz017ewJ1T4&rel=0&showinfo=0&enablejsapi=1&origin=https%3A%2F%2Fwww.tasva.com&widgetid=1"
             frameborder="0"
           ></iframe>
-        </div>
+        </div> */}
 
         <div className="mb-24">
           <BestSeller />
@@ -65,7 +59,7 @@ const FrontPages = () => {
         </div>
       </div>
 
-      <div className="lg:hidden">
+      {/* <div className="lg:hidden">
         <div className="slider-container">
           <Slider {...settings}>
             <div>
@@ -115,23 +109,11 @@ const FrontPages = () => {
           </Link>
         </div>
 
-        {/* <div className=" px-[10%] lg:p-10">
-          <iframe
-            autoPlay
-            muted
-            loop
-            id="bg-video"
-            className="object-cover"
-            src="https://www.youtube.com/embed/Sz017ewJ1T4?iv_load_policy=3&modestbranding=1&autoplay=0&loop=0&playlist=Sz017ewJ1T4&rel=0&showinfo=0&enablejsapi=1&origin=https%3A%2F%2Fwww.tasva.com&widgetid=1"
-            frameborder="0"
-          ></iframe>
-        </div> */}
-
         <div className="lg:mb-24">
           <BestSeller />
           <Collection />
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

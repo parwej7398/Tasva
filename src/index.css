@@ -15,3 +15,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.slick-prev::before{
+  color: #3e4877 !important;
+  font-size: 40px !important;
+}
+.slick-prev{
+  left: -45px !important;
+}
+.slick-next::before{
+  color: #3e4877 !important;
+  font-size: 40px !important;
+}
+@media only screen and (max-width:600px){
+  .slick-prev{
+    display: none !important;
+  }
+  .slick-next{
+    display: none !important;
+  }
+}
